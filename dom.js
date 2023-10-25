@@ -13,15 +13,18 @@ function backgroundandtext(background, text) {
   background.style.backgroundColor = "pink"
   text.textContent
 }
-DOMSelectors.gallery.insertAdjacentHTML(
-  "beforeend"
-)
+
 DOMSelectors.form.addEventListener("submit", function(event){
   event.preventDefault();
   console.log(DOMSelectors.album.value,);
     DOMSelectors.h2s.forEach((el) => el.textContent = DOMSelectors.album.value)
 });
 
-function makeAlbum() {
 
+function makeAlbum() {
+document.querySelector("gallery")
 }
+
+DOMSelectors.gallery.insertAdjacentHTML(
+  "beforeend"
+)
