@@ -7,6 +7,7 @@ const DOMSelectors = {
   DOMSelectors.form.addEventListener("submit", function (event) {
     event.preventDefault();
     console.log(DOMSelectors.album.value);
+    
     DOMSelectors.h2s.forEach(
       (el) => (el.textContent = DOMSelectors.album.value)
     );
