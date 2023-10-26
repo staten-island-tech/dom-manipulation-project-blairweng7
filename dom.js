@@ -18,6 +18,9 @@ function makeAlbum() {
   document.querySelector("artist");
   document.querySelector("image");
   DOMSelectors.insertAdjacentHTML ("beforeend", '${album.value}','${artist.value}','${image.value}')
+ // <h2></h2>
+ // <h3></h3>
+ // <h4></h4>
 }
 makeAlbum();
 
