@@ -5,23 +5,21 @@ const DOMSelectors = {
   album: document.querySelector("album"),
   artist: document.querySelector("artist"),
   image: document.querySelector("image"),
-  h2s: document.querySelectorAll("h2"),
-  gallery: document.querySelector("gallery"),
+  gallery: document.querySelector("gallery")
 };
 
 DOMSelectors.form.addEventListener("submit", function (event) {
   event.preventDefault(); 
+  document.querySelector(album)
+  document.querySelector(artist)
+  document.querySelector(image)
+  document.querySelector(gallery)
 });
 
 function makeAlbum() {
-  document.querySelector("album");
-  document.querySelector("artist");
-  document.querySelector("image");
-  DOMSelectors.insertAdjacentHTML ("beforeend", '${album.value}','${artist.value}','${image.value}')
- // <h2></h2>
- // <h3></h3>
- // <h4></h4>
-}
+DOMSelectors.form.insertAdjacentHTML ("afterbegin",
+
+)}
 makeAlbum();
 
 function clearCard(){
