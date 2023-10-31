@@ -14,20 +14,17 @@ DOMSelectors.form.addEventListener("submit", function (event) {
   document.querySelector(artist)
   document.querySelector(image)
   document.querySelector(gallery)
-});
+
 
 function makeAlbum() {
-DOMSelectors.form.insertAdjacentHTML ("afterbegin",
-
+DOMSelectors.gallery.insertAdjacentHTML ("afterbegin",
+`<div class = "card">
+<h2 class="card-album"> ${DOMSelectors.album.value}</h2>
+<h2 class="card-artist> ${DOMSelectors.artist.value}</h2>
+<img src= "${DOMSelectors.image.value}"><img>
+</div>`
 )}
+
 makeAlbum();
 
-function clearCard(){
-
-}
-
-function removeObject(){
-
-}
-
-//DOMSelectors.gallery.insertAdjacentHTML("beforeend",);
+});
