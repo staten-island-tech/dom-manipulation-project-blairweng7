@@ -25,6 +25,29 @@ DOMSelectors.gallery.insertAdjacentHTML ("afterbegin",
 </div>`
 )}
 
-makeAlbum();
+//const Album = makeAlbum()
+//addCard(Album)
+//clearFields()
+//addRemoveButtons
 
 });
+
+function clearFields(){
+  let clear = document.querySelectorAll("#form");
+  clear.forEach((clear)=>
+  clear.addEventListener("submit", function(event){
+    console.log()
+  })
+  )
+}
+
+function remove(){
+  let buttons = document.querySelectorAll("button");
+  buttons.forEach((btn) =>
+  btn.addEventListener("click", function(event){
+    console.log(event.target.parentElement);
+  })
+  );
+}
+
+remove();
