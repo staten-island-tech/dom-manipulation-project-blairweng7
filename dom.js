@@ -37,7 +37,6 @@ function addcard(card){
       <button class="remove"> Remove </button>
       </div>`);
 }
-addcard();
 
 function removecard(){
   document.querySelectorAll(".remove").forEach((button) => {
@@ -46,14 +45,12 @@ function removecard(){
      });
   });
 }
-removecard();
 
 function clearFields() {
  DOMSelectors.album.value ="";
  DOMSelectors.artist.value="";
  DOMSelectors.image.value="";
 }
-clearFields();
   
 /*function remove(){
   button.forEach((btn) =>
