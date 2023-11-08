@@ -1,23 +1,76 @@
-html,
-body,
-* {
-        .gallery {
-            margin: auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-items: center;
-        }
-    }
-.card{ 
-    background-color: #fbcfd6;
-    height: 50vh;
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 1rem;
-    box-shadow: 1rem 1rem 0.5rem 0.2rem #e0a8b2;
-    margin: 3rem 3rem
+html{
+    background-color: #e7e1d8;
 }
+
+#form{
+padding: 5px;
+font-size: 25px;
+font-family: 'Libre Baskerville', serif;
+margin: 1rem 5rem 1rem 5rem;
+flex-wrap: wrap;
+justify-content: space-around;
+border-radius: 20px;
+align-items: center;
+text-align: center;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 50px;
+    color: #656d4f;
+}
+
+.submit-button {
+    background-color:#b2ba9c;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+.submit-button:hover {
+    background-color: #ffffff;
+}
+
+.remove{
+    margin: 1rem;
+    background-color:#b2ba9c;
+    font-size: 20px;
+    align-items: center;
+    width: 15%;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.remove:hover{
+    background-color: #ffffff;
+}
+
+.card {
+    display: flex;
+    background-color: #c9a88d;
+    max-width: 60%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem auto;
+    box-shadow: 10px 10px #b3957c;
+}
+
+.artist-name{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 15px;
+}
+
+.album-name {
+    font-size: 30px;
+    margin: 1.3rem 0;
+    align-items: center;
+    text-transform: capitalize;
+    color: rgb(0, 0, 0);
+    font-family: 'Libre Baskerville', serif;
+}
+
+.card-image {
+    max-width: 50%;
+    margin: auto;
+} 

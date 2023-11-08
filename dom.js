@@ -1,53 +1,56 @@
-const form = document.querySelector("#form");
-console.log(form);
+/*
+Create an object called “DOMSelectors” to hold your DOM Selectors
+Create a function that creates an object and calls the following functions
+Create a function that injects the newly created object into the DOM
+Create a function that clears the input fields after injecting the object
+Create a function to remove an object after they have been created
+*/
+
 const DOMSelectors = {
   form: document.querySelector("#form"),
-  album: document.querySelector("album"),
-  artist: document.querySelector("artist"),
-  image: document.querySelector("image"),
-  gallery: document.querySelector("gallery")
+  album: document.getElementById("album-name"),
+  artist: document.getElementById("artist-name"),
+  image: document.getElementById("image-link"),
+  box: document.querySelector("#box"),
+  card: document.querySelector(".card"),
+  button: document.getElementById("btn"),
 };
-
+  
 DOMSelectors.form.addEventListener("submit", function (event) {
-  event.preventDefault(); 
-  document.querySelector(album)
-  document.querySelector(artist)
-  document.querySelector(image)
-  document.querySelector(gallery)
+  event.preventDefault();
+  });
 
-
-function makeAlbum() {
-DOMSelectors.gallery.insertAdjacentHTML ("afterbegin",
-`<div class = "card">
-<h2 class="card-album"> ${DOMSelectors.album.value}</h2>
-<h2 class="card-artist> ${DOMSelectors.artist.value}</h2>
-<img src= "${DOMSelectors.image.value}"><img>
-</div>`
-)}
-
-//const Album = makeAlbum()
-//addCard(Album)
-//clearFields()
-//addRemoveButtons
-
-});
-
-function clearFields(){
-  let clear = document.querySelectorAll("#form");
-  clear.forEach((clear)=>
-  clear.addEventListener("submit", function(event){
-    console.log()
-  })
-  )
+function addcard(){
+  DOMSelectors.box.insertAdjacentHTML("afterend",
+      `<div class="card" id="box">
+      <h1 class="album-name"> ${DOMSelectors.album.value} </h1>
+      <h3 class="artist-name"> ${DOMSelectors.artist.value} </h3>
+      <img src= "${DOMSelectors.image.value}" alt="image" class="card-image">
+      <button class="remove"> Remove </button>
+      </div>`);
 }
+addcard();
 
-function remove(){
-  let buttons = document.querySelectorAll("button");
-  buttons.forEach((btn) =>
+function removecard(){
+  document.querySelectorAll(".remove").forEach((button) => {
+     button.addEventListener("click", function(event){
+         event.target.parentElement.remove();
+     });
+  });
+}
+removecard();
+
+function clearFields() {
+ DOMSelectors.album.value ="";
+ DOMSelectors.artist.value="";
+ DOMSelectors.image.value="";
+}
+clearFields();
+  
+/*function remove(){
+  button.forEach((btn) =>
   btn.addEventListener("click", function(event){
     console.log(event.target.parentElement);
   })
   );
-}
-
-remove();
+}*/
