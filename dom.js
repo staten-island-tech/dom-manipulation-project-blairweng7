@@ -18,14 +18,22 @@ const DOMSelectors = {
   
 DOMSelectors.form.addEventListener("submit", function (event) {
   event.preventDefault();
+  const card = {
+    album: DOMSelectors.album.value,
+    artist: DOMSelectors.artist.value,
+    image: DOMSelectors.image.value,
+  };
+  addcard(card);
+  removecard();
+  clearFields();
   });
 
-function addcard(){
+function addcard(card){
   DOMSelectors.box.insertAdjacentHTML("afterend",
       `<div class="card" id="box">
-      <h1 class="album-name"> ${DOMSelectors.album.value} </h1>
-      <h3 class="artist-name"> ${DOMSelectors.artist.value} </h3>
-      <img src= "${DOMSelectors.image.value}" alt="image" class="card-image">
+      <h1 class="album-name"> ${card.album} </h1>
+      <h3 class="artist-name"> ${card.artist} </h3>
+      <img src= "${card.image}" alt="image" class="card-image">
       <button class="remove"> Remove </button>
       </div>`);
 }
