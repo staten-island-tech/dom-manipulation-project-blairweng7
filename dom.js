@@ -15,43 +15,41 @@ const DOMSelectors = {
   card: document.querySelector(".card"),
   button: document.getElementById("btn"),
 };
-  
+
 DOMSelectors.form.addEventListener("submit", function (event) {
   event.preventDefault();
-  const card = {
-    album: DOMSelectors.album.value,
-    artist: DOMSelectors.artist.value,
-    image: DOMSelectors.image.value,
-  };
-  addcard(card);
-  removecard();
-  clearFields();
-  });
+});
 
-function addcard(card){
-  DOMSelectors.box.insertAdjacentHTML("afterend",
-      `<div class="card" id="box">
-      <h1 class="album-name"> ${card.album} </h1>
-      <h3 class="artist-name"> ${card.artist} </h3>
-      <img src= "${card.image}" alt="image" class="card-image">
-      <button class="remove"> Remove </button>
-      </div>`);
+function addcard() {
+  DOMSelectors.box.insertAdjacentHTML(
+    "afterend",
+    `<div class="card" id="box">
+        <h1 class="album-name"> ${DOMSelectors.album.value} </h1>
+        <h3 class="artist-name"> ${DOMSelectors.artist.value} </h3>
+        <img src= "${DOMSelectors.image.value}" alt="image" class="card-image">
+        <button class="remove"> Remove </button>
+        </div>`
+  );
 }
 
-function removecard(){
+function removecard() {
   document.querySelectorAll(".remove").forEach((button) => {
-     button.addEventListener("click", function(event){
-         event.target.parentElement.remove();
-     });
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.target.parentElement.remove();
+    });
   });
 }
 
 function clearFields() {
- DOMSelectors.album.value ="";
- DOMSelectors.artist.value="";
- DOMSelectors.image.value="";
+  DOMSelectors.album.value = "";
+  DOMSelectors.artist.value = "";
+  DOMSelectors.image.value = "";
 }
-  
+addcard();
+removecard();
+clearFields();
+
 /*function remove(){
   button.forEach((btn) =>
   btn.addEventListener("click", function(event){
