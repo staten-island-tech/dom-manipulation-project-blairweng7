@@ -18,6 +18,9 @@ const DOMSelectors = {
 
 DOMSelectors.form.addEventListener("submit", function (event) {
   event.preventDefault();
+  addcard();
+removecard();
+clearFields();
 });
 
 function addcard() {
@@ -46,9 +49,7 @@ function clearFields() {
   DOMSelectors.artist.value = "";
   DOMSelectors.image.value = "";
 }
-addcard();
-removecard();
-clearFields();
+
 
 /*function remove(){
   button.forEach((btn) =>
